@@ -1,0 +1,7 @@
+playwright
+playwright-stealth
+langchain
+langchain-community
+easyocr
+python-dotenv
+pydantic
