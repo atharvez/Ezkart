@@ -1,10 +1,10 @@
-# Smart AI-Powered Shopping & Grocery Agent 🛒🤖
+# Smart AI-Powered Shopping & Grocery Agent
 
 An intelligent, autonomous buying assistant that parses unstructured text shopping lists, analyzes product prices, respects strict budget limits, and automates product purchasing on Amazon using **Local LLMs** and **Playwright browser automation**.
 
 ---
 
-## 🌟 Key Features
+## Key Features
 
 - **Unstructured Text Parsing**: Supply a raw text list (e.g., *"buy 2 bottles of shampoo and 1 pack of eggs under 500 rs"*).
 - **Local LLM Parsing (Llama 3)**: Automatically converts raw lists into structured Pydantic JSON payloads specifying item names, optimized search queries, quantities, and budgets.
@@ -15,7 +15,7 @@ An intelligent, autonomous buying assistant that parses unstructured text shoppi
 
 ---
 
-## 🛠️ System Architecture
+## System Architecture
 
 The following diagram illustrates the end-to-end data flow of the agent:
 
@@ -36,21 +36,21 @@ graph TD
 ### Folder Structure
 ```
 VLM Project/
-├── bot/
-│   ├── agents/
-│   │   └── shopping_agent.py   # Text-based LLM parsing (Llama 3 via Langchain)
-│   ├── automation/
-│   │   └── amazon_bot.py       # Playwright stealth browser automation & budget logic
-│   └── core/
-│       └── db.py               # Async MongoDB client setup (using motor)
-├── .env.example                # Example configuration template
-├── demo.py                     # CLI Interactive Dashboard (main orchestrator)
-└── requirements.txt            # System dependencies
+|-- bot/
+|   |-- agents/
+|   |   \-- shopping_agent.py   # Text-based LLM parsing (Llama 3 via Langchain)
+|   |-- automation/
+|   |   \-- amazon_bot.py       # Playwright stealth browser automation & budget logic
+|   \-- core/
+|       \-- db.py               # Async MongoDB client setup (using motor)
+|-- .env.example                # Example configuration template
+|-- demo.py                     # CLI Interactive Dashboard (main orchestrator)
+\-- requirements.txt            # System dependencies
 ```
 
 ---
 
-## 🚀 Installation & Setup
+## Installation & Setup
 
 ### 1. Prerequisites
 Ensure you have the following installed on your system:
@@ -94,7 +94,7 @@ TELEGRAM_BOT_TOKEN=your_telegram_bot_token_here
 
 ---
 
-## 💻 Usage
+## Usage
 
 To launch the interactive terminal:
 ```bash
@@ -116,7 +116,7 @@ Once you confirm the parsed items, a Playwright Chromium window will spawn in **
 
 ---
 
-## ⚠️ Key Considerations & Safety Limits
+## Key Considerations & Safety Limits
 
 > [!IMPORTANT]
 > The automation runs in **Headful Mode** (`headless=False`) so you can supervise actions. Do not close the browser manually; allow the script to prompt you in the console before closing.
